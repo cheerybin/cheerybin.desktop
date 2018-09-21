@@ -1,7 +1,4 @@
 {
-  "name": "cheerybin-desktop",
-  "version": "0.0.1",
-  "description": "front end framework for Chat Apps",
   "main": "resources/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,23 +8,12 @@
     "release": "shadow-cljs release main renderer",
     "clean": "rm -rf resources/public/js/* && rm -rf target"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cheerybin/cheerybin.desktop.git"
-  },
-  "author": "theJian <thejianmail@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cheerybin/cheerybin.desktop/issues"
-  },
-  "homepage": "https://github.com/cheerybin/cheerybin.desktop#readme",
   "devDependencies": {
-    "electron-prebuilt": "^1.4.13",
-    "shadow-cljs": "^2.6.6"
+    "shadow-cljs": "^2.6.6",
+    "electron": "^2.0.8"
   },
   "dependencies": {
     "create-react-class": "^15.6.3",
-    "electron": "^2.0.8",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
   }

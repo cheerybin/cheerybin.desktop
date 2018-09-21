@@ -12,7 +12,7 @@
   (.loadURL @main-window (str "file://" js/__dirname "/public/index.html"))
   (.on @main-window "closed" #(reset! main-window nil)))
 
-(defn main []
+(defn -main []
   ; CrashReporter can just be omitted
   (.start crashReporter
           (clj->js
@@ -24,3 +24,5 @@
   (.on app "window-all-closed" #(when-not (= js/process.platform "darwin")
                                   (.quit app)))
   (.on app "ready" init-browser))
+
+(set! *main-cli-fn* -main)

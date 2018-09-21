@@ -1,4 +1,4 @@
-(ns app.renderer.core
+(ns app.ui.core
   (:require [reagent.core :as reagent]
             [re-frame.core :as rf]
             [clojure.string :as str]))
