@@ -14,55 +14,29 @@
 
   :source-paths ["src"]
 
-  :clean-targets ^{:protect false} ["resources/main.js"
-                                    "resources/public/js"]
+  :clean-targets ^{:protect false} ["build/"]
 
   :profiles {:dev {:cljsbuild
                    {:builds
-                    [{:id "main"
-                      :source-paths ["src/app"]
+                    [{:source-paths ["src/cb"]
                       ; :figwheel     {:on-jsload ""}
-                      :compiler     {:output-to      "resources/main.js"
+                      :compiler     {:output-to      "build/main.js"
                                      :optimizations  :none
-                                     :main           app.main.core
+                                     :main           cb.core
                                      :install-deps   true
                                      :target         :nodejs
                                      :parallel-build true
-                                     :source-map     true}}
-
-                     {:id "ui"
-                      :source-paths ["src/app"]
-                      :compiler     {:output-to      "resources/public/js/app.js"
-                                     :optimizations  :none
-                                     :main           app.ui.core
-                                     :install-deps   true
-                                     :target         :nodejs
-                                     :hashbang       false
-                                     :parallel-build true
-                                     :source-map     true}}]}}
+                                     :source-map     true
+                                     :pretty-print   true}}]}}
 
              :prod {:cljsbuild
                     {:builds
-                      [{:id "main"
-                        :source-paths ["src/app"]
-                        :compiler     {:output-to      "resources/main.js"
+                      [{:source-paths ["src/cb"]
+                        :compiler     {:output-to      "build/main.js"
                                        :optimizations  :advanced
                                        :main           app.main.core
                                        :install-deps   true
                                        :target         :nodejs
-                                       :parallel-build true
-                                       :process-shim   true
-                                       :pretty-print   false
-                                       :elide-asserts  true}}
-
-                       {:id "ui"
-                        :source-paths ["src/app"]
-                        :compiler     {:output-to      "resources/public/js/app.js"
-                                       :optimizations  :advanced
-                                       :main           app.ui.core
-                                       :install-deps   true
-                                       :target         :nodejs
-                                       :hashbang       false
                                        :parallel-build true
                                        :process-shim   true
                                        :pretty-print   false

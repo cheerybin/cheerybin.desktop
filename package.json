@@ -8,10 +8,6 @@
     "release": "shadow-cljs release main renderer",
     "clean": "rm -rf resources/public/js/* && rm -rf target"
   },
-  "devDependencies": {
-    "shadow-cljs": "^2.6.6",
-    "electron": "^2.0.8"
-  },
   "dependencies": {
     "create-react-class": "^15.6.3",
     "react": "^16.5.0",

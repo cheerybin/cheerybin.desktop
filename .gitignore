@@ -18,3 +18,4 @@ resources/public/js
 resources/main.js
 target/
 .nrepl-port
+build/
