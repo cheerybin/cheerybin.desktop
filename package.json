@@ -1,13 +1,5 @@
 {
   "main": "resources/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "shadow-cljs watch main renderer",
-    "start": "NODE_ENV=development && electron .",
-    "build": "shadow-cljs compile main renderer",
-    "release": "shadow-cljs release main renderer",
-    "clean": "rm -rf resources/public/js/* && rm -rf target"
-  },
   "dependencies": {
     "create-react-class": "^15.6.3",
     "react": "^16.5.0",
