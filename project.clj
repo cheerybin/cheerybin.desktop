@@ -42,4 +42,4 @@
                                        :pretty-print   false
                                        :elide-asserts  true}}]}}}
   :aliases {"fig"   ["trampoline" "run" "-m" "figwheel.main"]
-            "build" ["trampoline" "run" "-m" "figwheel.main" "-b" "cb" "-r"]})
+            "build" ["trampoline" "run" "-m" "figwheel.main" "-b" "cb"]})
