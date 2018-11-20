@@ -1,0 +1,7 @@
+{:main           cb.core
+ :output-to      "build/main.js"
+ :target         :nodejs
+ :optimizations  :advanced
+ :install-deps   true
+ :parallel-build true
+ :pretty-print   false}
