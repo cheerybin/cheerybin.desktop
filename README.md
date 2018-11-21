@@ -3,7 +3,6 @@
 ## Development
 
 ```sh
-npm install
-npm run watch
-npm start
+clj -A:dev
+clj -A:build
 ```
