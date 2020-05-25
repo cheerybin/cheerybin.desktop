@@ -1,2 +1,0 @@
-{:main cb.core
- :target :nodejs}
